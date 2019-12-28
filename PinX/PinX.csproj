@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B793A8BF-087F-4078-9C8B-32C599BD08DD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PinX</RootNamespace>
+    <AssemblyName>PinX</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SeleniumExtras.WaitHelpers, Version=3.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetSeleniumExtras.WaitHelpers.3.11.0\lib\net45\SeleniumExtras.WaitHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounts.Designer.cs">
+      <DependentUpon>Accounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounts_Add.Designer.cs">
+      <DependentUpon>Accounts_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account_Edit.Designer.cs">
+      <DependentUpon>Account_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetPins.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetPins.Designer.cs">
+      <DependentUpon>GetPins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PinBlogPosts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PinBlogPosts.Designer.cs">
+      <DependentUpon>PinBlogPosts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPinManually.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPinManually.Designer.cs">
+      <DependentUpon>AddPinManually.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PinBlogPostsSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PinBlogPostsSettings.Designer.cs">
+      <DependentUpon>PinBlogPostsSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pin_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pin_Edit.Designer.cs">
+      <DependentUpon>Pin_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Repin.Designer.cs">
+      <DependentUpon>Repin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repin_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Repin_Edit.Designer.cs">
+      <DependentUpon>Repin_Edit.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Accounts.resx">
+      <DependentUpon>Accounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounts_Add.resx">
+      <DependentUpon>Accounts_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account_Edit.resx">
+      <DependentUpon>Account_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetPins.resx">
+      <DependentUpon>GetPins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PinBlogPosts.resx">
+      <DependentUpon>PinBlogPosts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPinManually.resx">
+      <DependentUpon>AddPinManually.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PinBlogPostsSettings.resx">
+      <DependentUpon>PinBlogPostsSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pin_Edit.resx">
+      <DependentUpon>Pin_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Repin.resx">
+      <DependentUpon>Repin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Repin_Edit.resx">
+      <DependentUpon>Repin_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="scripts\powerbi.js.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="geckodriver.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\powerbi.js" />
+    <Content Include="scripts\powerbi.min.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Selenium.Firefox.WebDriver.0.26.0\build\Selenium.Firefox.WebDriver.targets" Condition="Exists('..\packages\Selenium.Firefox.WebDriver.0.26.0\build\Selenium.Firefox.WebDriver.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Selenium.Firefox.WebDriver.0.26.0\build\Selenium.Firefox.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.Firefox.WebDriver.0.26.0\build\Selenium.Firefox.WebDriver.targets'))" />
+  </Target>
+</Project>
